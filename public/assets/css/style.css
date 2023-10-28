@@ -1,0 +1,71 @@
+.bg-primary {
+    background-color: #f1ae45!important;
+}
+
+.bg-primary-gradient {
+    background-image: linear-gradient(45deg, #f1ae45, #df9210, #f9ed4a)!important;
+}
+
+.text-pop {
+    font-family: poppins!important;
+}
+
+.text-pop-bold {
+    font-family: poppins-bold!important;
+}
+
+.text-pop-semibold {
+    font-family: poppins-semibold!important;
+}
+
+.text-pop-italic {
+    font-family: poppins-italic!important;
+}
+
+.text-ds {
+    font-family: dancing-script!important;
+}
+
+.bg-image-1 {
+    background-image: url('../images/FPK2023101845-transparent.png')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.container-overlay {
+    background-color: rgba(87,60,35, 0.5);
+    height: 130vh !important;
+}
+
+.border-primary {
+    border-color: #f1ae45!important;
+}
+
+.btn-primary {
+    background-color: #f1ae45!important;
+    border: none!important;
+}
+
+.badge-primary {
+    background-color: #f1ae45!important;
+    border: none!important;
+    color: #fff!important;
+}
+
+.btn-secondary {
+    background-color: #f9ed4a!important;
+    border: none!important;
+    color: #573c23;
+}
+
+.bg-footer {
+    background-color: #573c23!important;
+}
+
+#preloader {
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+}

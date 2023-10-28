@@ -1,0 +1,39 @@
+@font-face {
+    font-family: poppins;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: poppins-italic;
+    src: url('../fonts/Poppins/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: poppins-semibold;
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: dancing-script;
+    src: url('../fonts/Dancing_Script/static/DancingScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: dancing-script-bold;
+    src: url('../fonts/Dancing_Script/static/DancingScript-Bold.ttf');
+}
+
+@font-face {
+    font-family: dancing-script-medium;
+    src: url('../fonts/Dancing_Script/static/DancingScript-Medium.ttf');
+}
+
+@font-face {
+    font-family: dancing-script-semibold;
+    src: url('../fonts/Dancing_Script/static/DancingScript-SemiBold.ttf');
+}
