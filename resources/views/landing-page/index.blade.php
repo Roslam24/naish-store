@@ -1,5 +1,70 @@
 @extends('landing-page.layouts.index')
 @section('content')
+    <div class="container-fluid mt-5 py-5" id="home">
+        <h1 class="display-4 text-light text-center text-ds fw-bold mb-5 pt-3">Ais Parfume</h1>
+        <h1 class="display-6 text-light text-center text-pop-semibold fw-bold mb-5 pt-3">"Rekomendasi Artis"</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+            <div class="d-flex justify-content-center align-items-center gap-2">
+                <div class="card thumbnails">
+                    <img src="{{ asset('assets/images/artis/fuji.JPG') }}" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <a href="https://www.instagram.com/fuji_an" class="btn card-text" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ asset('assets/icons/instagram.png') }}" width="28" alt="">&nbsp;
+                            <span class="text-pop">@fuji_an</span>
+                        </a>
+                        <a href="https://www.instagram.com/fadlyfsl_" class="btn card-text" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ asset('assets/icons/instagram.png') }}" width="28" alt="">&nbsp;
+                            <span class="text-pop">@fadlyfsl_</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card thumbnails">
+                    <img src="{{ asset('assets/images/artis/arfan-afif.JPG') }}" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <a href="https://www.instagram.com/arfanafiif" class="btn card-text" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ asset('assets/icons/instagram.png') }}" width="28" alt="">&nbsp;
+                            <span class="text-pop">@arfanafiif</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card thumbnails">
+                    <img src="{{ asset('assets/images/artis/inara.jpg') }}" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <a href="https://www.instagram.com/mommy_starla" class="btn card-text" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ asset('assets/icons/instagram.png') }}" width="28" alt="">&nbsp;
+                            <span class="text-pop">@mommy_starla</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                <div class="card thumbnails">
+                    <img src="{{ asset('assets/images/artis/thoriq.JPG') }}" class="card-img-top rounded-0" alt="...">
+                    <div class="card-body">
+                        <a href="https://www.instagram.com/thariqhalilintar" class="btn card-text" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ asset('assets/icons/instagram.png') }}" width="28" alt="">&nbsp;
+                            <span class="text-pop">@thariqhalilintar</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="container-video card thumbnails">
+                    <video onclick="play(event)" src="{{ asset('assets/images/artis/1.mp4') }}" class="thumbnails" id="video"></video>
+                    <div class="controls">
+                        <button class="btn" onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                        <button class="btn" onclick="rewind(event)"><i class="fa fa-fast-backward"></i></button>
+                        <div class="timeline">
+                            <div class="bar">
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="forward(event)"><i class="fa fa-fast-forward"></i></button>
+                        <button class="btn" onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>
+                        <button class="btn" onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid p-0 bg-image-1" id="home">
       <div class="container-overlay d-flex flex-column justify-content-center align-items-center px-5">
         <h1 class="display-3 fw-bold text-ds text-light">Ais Parfume</h1>
@@ -12,13 +77,13 @@
         <h1 class="display-4 text-light text-center text-ds fw-bold mb-5 pt-3">Harga Promo</h1>
         <div class="d-flex justify-content-around align-items-center">
             <div class="col-4 card border-light rounded-0 shadow">
-                <img src="{{ asset('assets/images/FPK2023101846.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/1D9A4946.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body bg-primary">
-                    <span class="text-ds fs-2 fw-bold text-light">Paket 1</span>
+                    <span class="text-ds fs-2 fw-bold text-light">Rich Series</span>
                     <span class="badge rounded-pill text-bg-light text-pop">6 in 1</span>
                     <span class="d-flex flex-column">
-                        <span class="fs-3 text-pop-semibold text-light">Rp145.000</span>
-                        <small class="text-pop-italic text-decoration-line-through text-light">Rp299.000</small>
+                        <span class="fs-3 text-pop-bold text-light">Rp145.000</span>
+                        <small class="text-pop-semibold text-decoration-line-through text-decoration-danger">Rp299.000</small>
                     </span>
                     <div class="d-flex flex-column py-2 justify-content-center align-items-start gap-1">
                         <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
@@ -27,7 +92,7 @@
                         </div>
                         <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
                             <i class="fas fa-check text-success"></i>&nbsp;
-                            Gratis Ongkir
+                            Gratis Ongkir Sepulau Jawa
                         </div>
                         <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
                             <i class="fas fa-check text-success"></i>&nbsp;
@@ -47,13 +112,13 @@
             </div>
     
             <div class="col-4 card border-light rounded-0 shadow">
-                <img src="{{ asset('assets/images/FPK2023101846.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/1D9A4944.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body bg-primary">
-                    <span class="text-ds fs-2 fw-bold text-light">Paket 2</span>
+                    <span class="text-ds fs-2 fw-bold text-light">Sultan Series</span>
                     <span class="badge rounded-pill text-bg-light text-pop">12 in 1</span>
                     <span class="d-flex flex-column">
-                        <span class="fs-3 text-pop-semibold text-light">Rp249.000</span>
-                        <small class="text-pop-italic text-decoration-line-through text-light">Rp520.000</small>
+                        <span class="fs-3 text-pop-bold text-light">Rp249.000</span>
+                        <small class="text-pop-semibold text-decoration-line-through text-decoration-danger">Rp520.000</small>
                     </span>
                     <div class="d-flex flex-column py-2 justify-content-center align-items-start gap-1">
                     <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
@@ -62,7 +127,7 @@
                         </div>
                         <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
                             <i class="fas fa-check text-success"></i>&nbsp;
-                            Gratis Ongkir
+                            Gratis Ongkir Sepulau Jawa
                         </div>
                         <div class="d-flex text-pop justify-content-start text-secondary align-items-center bg-light rounded-pill px-2 py-1">
                             <i class="fas fa-check text-success"></i>&nbsp;
@@ -89,7 +154,7 @@
         <h1 class="display-6 fw-bold text-pop text-center text-ds mb-5 pt-3">Ais Parfume Rich Series</h1>
         <div class="w-100 d-flex gap-3 overflow-x-auto" style="white-space: nowrap;">
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101849.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101849.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Eveline</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -113,7 +178,7 @@
                 </div>
             </div>
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101852.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101852.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Reval</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -138,7 +203,7 @@
                 </div>
             </div>
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101850.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101850.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Cherish</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -163,7 +228,7 @@
                 </div>
             </div>
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101854.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101854.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Royal Man</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -183,7 +248,7 @@
                 </div>
             </div>
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101851.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101851.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Esca Sexy</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -201,7 +266,7 @@
                 </div>
             </div>
             <div class="col-3 card border-primary rounded-0">
-                <img src="{{ asset('assets/images/FPK2023101853.JPEG') }}" class="card-img-top rounded-0" alt="...">
+                <img src="{{ asset('assets/images/produk/FPK2023101853.JPEG') }}" class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
                     <span class="text-ds fs-4">Ais Parfume - Raline</span>
                     <div class="card-text gap-1 d-flex align-items-center">
@@ -234,36 +299,176 @@
             <h1 class="display-6 fw-bold text-pop text-center text-ds mb-5 pt-3 text-light">Testimoni</h1>
             <div class="w-100 d-flex gap-3 overflow-x-auto" style="white-space: nowrap;">
                 <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4 text-pop-semibold">hilyascarves.official</span>
+                            <span class="fs-6 text-pop">Indramayu, Jawa Barat</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-pop text-wrap">Udah murah meriah.. dapet LM juga gais... ini jualan apa sedekah ya... <br> Thanks seller yg baik hati... semoga berkah usahanya...</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-1">
+                                <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.58.59.jpeg') }}" class="img-thumbnail" alt="testimoni-1">
+                            </a>
+                            <div class="modal fade" id="testimoni-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.58.59.jpeg') }}" class="img-fluid" alt="testimoni-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card border-primary rounded-0">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4 text-pop-semibold">oqkf2udoa8</span>
+                            <span class="fs-6 text-pop">Blitar, Jawa Timur</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-pop text-wrap">Ga seexpect ini parfume murah dapet 6 botol, baru buka box wanginya langsung nyebar ... pengiriman juga cepet banget, berkah terus kak</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-2">
+                                <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.59.25.jpeg') }}" class="img-thumbnail" alt="testimoni-2">
+                            </a>
+                            <div class="modal fade" id="testimoni-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.59.25.jpeg') }}" class="img-fluid" alt="testimoni-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card border-primary rounded-0">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4 text-pop-semibold">entincastinih</span>
+                            <span class="fs-6 text-pop">Tangerang, Banten</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-pop text-wrap">Bagus,,pengiriman cepat,,wangi'y jg mantap..murah lg</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-3">
+                                <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.59.55.jpeg') }}" class="img-thumbnail" alt="testimoni-3">
+                            </a>
+                            <div class="modal fade" id="testimoni-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/WhatsApp Image 2023-10-28 at 17.59.55.jpeg') }}" class="img-fluid" alt="testimoni-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card border-primary rounded-0">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
                         <div class="d-flex flex-column">
                             <span class="fs-4 text-pop-semibold">D**n A**a s**p</span>
-                            <span class="fs-6 text-pop">Jawa Barat</span>
+                            <span class="fs-6 text-pop">Indramayu, Jawa Barat</span>
                         </div>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-pop text-wrap">Masya Allah paketnya sudah sampai dan alhamdulillah wangi.</p>
-                    </div>
-                    <div class="card-footer p-0">
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-4">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101320_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-4">
+                            </a>
+                            <div class="modal fade" id="testimoni-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101320_TikTok.jpg') }}" class="img-fluid" alt="testimoni-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
                         <div class="d-flex flex-column">
                             <span class="fs-4 text-pop-semibold">c**u</span>
-                            <span class="fs-6 text-pop">Jawa Barat</span>
+                            <span class="fs-6 text-pop">Semarang, Jawa Tengah</span>
                         </div>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-pop text-wrap">Suka sekali sama wanginya keren tempatnya ok banget</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-5">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101559_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-5">
+                            </a>
+                            <div class="modal fade" id="testimoni-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101559_TikTok.jpg') }}" class="img-fluid" alt="testimoni-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer p-0">
+                </div>
+                {{-- <div class="col-3 card border-primary rounded-0">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4 text-pop-semibold">D**n A**a s**p</span>
+                            <span class="fs-6 text-pop">Surabaya, Jawa Timur</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-pop text-wrap">Masya Allah paketnya sudah sampai dan alhamdulillah wangi.</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-1">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101320_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-1">
+                            </a>
+                            <div class="modal fade" id="testimoni-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101320_TikTok.jpg') }}" class="img-fluid" alt="testimoni-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4 text-pop-semibold">c**u</span>
+                            <span class="fs-6 text-pop">Blitar, Jawa Timur</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-pop text-wrap">Suka sekali sama wanginya keren tempatnya ok banget</p>
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-2">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101559_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-2">
+                            </a>
+                            <div class="modal fade" id="testimoni-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101559_TikTok.jpg') }}" class="img-fluid" alt="testimoni-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card border-primary rounded-0">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
                         <div class="d-flex flex-column">
                             <span class="fs-4 text-pop-semibold">M**</span>
                             <span class="fs-6 text-pop">Jawa Barat</span>
@@ -271,13 +476,23 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text text-pop text-wrap">Suka bgt sama ini parfum bau nya segar2 dan cpt sampai</p>
-                    </div>
-                    <div class="card-footer p-0">
+                        <div class="row">
+                            <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-3">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101614_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-3">
+                            </a>
+                            <div class="modal fade" id="testimoni-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101614_TikTok.jpg') }}" class="img-fluid" alt="testimoni-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
                         <div class="d-flex flex-column">
                             <span class="fs-4 text-pop-semibold">m**n</span>
                             <span class="fs-6 text-pop">Jawa Barat</span>
@@ -285,27 +500,21 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text text-pop text-wrap">Semuanya baik ,, rekomen bgt buat yang cari parfume dengan wangi yg elegan</p>
-                    </div>
-                    <div class="card-footer p-0">
-                    </div>
-                </div>
-                <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
-                        <div class="d-flex flex-column">
-                            <span class="fs-4 text-pop-semibold">I** W**g</span>
-                            <span class="fs-6 text-pop">Jawa Barat</span>
+                        <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-4">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101629_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-4">
+                            </a>
+                            <div class="modal fade" id="testimoni-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101629_TikTok.jpg') }}" class="img-fluid" alt="testimoni-4">
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text text-pop text-wrap">Kerennnn ga nyangka harga yang semurah itu dpt parfum 6 botol wanginya ga ketulungan</p>
-                    </div>
-                    <div class="card-footer p-0">
-                    </div>
                 </div>
                 <div class="col-3 card border-primary rounded-0">
-                    <div class="card-header d-flex gap-3">
-                        <img src="{{ asset('assets/icons/user.png') }}" class="w-25 rounded-circle border-primary bg-primary" alt="...">
+                    <div class="card-header d-flex gap-3 align-items-center">
+                        <img src="{{ asset('assets/icons/user.png') }}" class="user-avatar rounded-circle border-primary bg-primary" alt="...">
                         <div class="d-flex flex-column">
                             <span class="fs-4 text-pop-semibold">G**i</span>
                             <span class="fs-6 text-pop">Jawa Barat</span>
@@ -313,10 +522,18 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text text-pop text-wrap">Baru buka box wanginya sudah kemana2..</p>
+                        <a href="#" type="button" class="btn p-0 m-0 col-4" style="background-image: url()" data-bs-toggle="modal" data-bs-target="#testimoni-5">
+                                <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101706_TikTok.jpg') }}" class="img-thumbnail" alt="testimoni-5">
+                            </a>
+                            <div class="modal fade" id="testimoni-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="container">
+                                        <img src="{{ asset('assets/images/testimoni/Screenshot_20231002_101706_TikTok.jpg') }}" class="img-fluid" alt="testimoni-5">
+                                    </div>
+                                </div>
+                        </div>
                     </div>
-                    <div class="card-footer p-0">
-                    </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
