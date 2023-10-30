@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body class="bg-primary">
-    <div id="preloader"></div>
-    @include('landing-page.layouts.navbar')
+    <div id="preloader">
+        <img src="{{ asset('assets/icons/loading.gif') }}" class="w-50" alt="">
+    </div>
+    @include('landing-page.desktop.layouts.navbar')
     <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" tabindex="0">
         @yield('content')
     </main>
-    @include('landing-page.layouts.footer')
+    @include('landing-page.desktop.layouts.footer')
 </body>
 <script src="https://kit.fontawesome.com/4c937629e3.js" crossorigin="anonymous"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

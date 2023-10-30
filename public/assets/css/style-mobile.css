@@ -35,7 +35,7 @@
 
 .container-overlay {
     background-color: rgba(87,60,35, 0.5);
-    height: 130vh !important;
+    height: 80vh !important;
 }
 
 .border-primary {
@@ -144,4 +144,8 @@
 .user-avatar {
     width: 3rem!important;
     height: 3rem!important;
+}
+
+.fs-7 {
+    font-size: smaller!important;
 }

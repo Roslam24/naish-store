@@ -17,6 +17,6 @@ class LandingPage extends Controller
             return view('landing-page/mobile/index',compact('title'));
         }
 
-        return view('landing-page/index',compact('title'));
+        return view('landing-page/desktop/index',compact('title'));
     }
 }
